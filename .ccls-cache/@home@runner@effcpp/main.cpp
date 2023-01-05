@@ -13,8 +13,7 @@ long long f(int newn){
   // day count
   //      ↑   extra egg
   //                ↑
-  f(newn++);
-  return 2*(f(newn)+1);
+  return 2*(f(newn+1)+1);
 }
 
 int main() {

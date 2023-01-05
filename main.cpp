@@ -1,13 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-  int n;
-  cin>>n;
-  int newn = 0;
-  newn = (1+1)*2;
-  for(int i = 0; i<n-1; i++){
-    newn = (newn+1)*2;
+int n;
+
+long long f(int newn){
+  //ensure number of times run
+  if(newn==n){
+    //return end number
+    return 1;
   }
+  //recursive formula
+  return 2*(f(newn+1)+1);
+}
+
+int main() {
+  //input
+  cin>>n;
+  //output
+  int newn = f(1);
   cout<<newn;
 }

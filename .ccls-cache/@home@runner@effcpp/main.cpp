@@ -10,7 +10,11 @@ long long f(int newn){
     return 1;
   }
   //recursive formula
-  return 2*(f(newn+1)+1);
+  // day count
+  //      ↑   extra egg
+  //                ↑
+  f(newn++);
+  return 2*(f(newn)+1);
 }
 
 int main() {
